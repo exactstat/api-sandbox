@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+
+  multivisor:
+    # https://pypi.org/project/multivisor/
+    container_name: multivisor_test
+    build: ./multivisor
+    env_file: ./multivisor/.env
+    volumes:
+      - ./multivisor/multivisor:/multivisor
+    ports:
+      # port for a multivisor GUI. http://localhost:22000/view/process
+      - '22000:22000'  
+    command: multivisor -c /multivisor/multivisor.conf
+    networks:
+      - testnet
+
+  service-a:
+    container_name: service-a
+    build: ./service-a
+    env_file: ./service-a/.env
+    working_dir: /app
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./service-a/app:/app
+      - ./service-a/supervisor:/etc/supervisor
+    command: supervisord
+    networks:
+      - testnet
+   
+  service-b:
+    container_name: service-b
+    build: ./service-b
+    env_file: ./service-b/.env
+    working_dir: /app
+    ports:
+      - '8001:8000'
+    volumes:
+      - ./service-b/app:/app
+      - ./service-a/supervisor:/etc/supervisor
+    command: supervisord
+    networks:
+      - testnet
+  
+networks:
+  testnet:

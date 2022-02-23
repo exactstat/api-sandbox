@@ -1,0 +1,20 @@
+2022-02-23 08:06:17,264 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-02-23 08:06:17,270 INFO RPC interface 'supervisor' initialized
+2022-02-23 08:06:17,271 INFO RPC interface 'multivisor' initialized
+2022-02-23 08:06:17,271 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2022-02-23 08:06:17,274 INFO supervisord started with pid 1
+2022-02-23 08:06:17,368 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-02-23 08:06:17,374 INFO RPC interface 'supervisor' initialized
+2022-02-23 08:06:17,374 INFO RPC interface 'multivisor' initialized
+2022-02-23 08:06:17,375 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2022-02-23 08:06:17,378 INFO supervisord started with pid 1
+2022-02-23 08:06:18,292 INFO spawned: 'rest_api' with pid 14
+2022-02-23 08:06:18,386 INFO spawned: 'rest_api' with pid 13
+2022-02-23 08:06:19,706 INFO success: rest_api entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-23 08:06:19,745 INFO success: rest_api entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-23 08:06:36,736 WARN received SIGTERM indicating exit request
+2022-02-23 08:06:36,743 INFO waiting for rest_api to die
+2022-02-23 08:06:36,775 WARN received SIGTERM indicating exit request
+2022-02-23 08:06:36,777 INFO waiting for rest_api to die
+2022-02-23 08:06:36,983 INFO stopped: rest_api (exit status 0)
+2022-02-23 08:06:37,009 INFO stopped: rest_api (exit status 0)
